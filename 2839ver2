@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(void) {
+	int KG, bonggi=0;
+	scanf("%d", &KG);
+
+	while (KG > 0) {
+		if (KG % 5 == 0) {
+			bonggi += KG / 5;
+			KG = 0;
+		}
+		else {
+			KG -= 3;
+			bonggi++;
+		}
+		
+	}
+	if (KG != 0 || bonggi==0) {
+		printf("-1\n");
+	}
+	else {
+		printf("%d", bonggi);
+	}
+}
